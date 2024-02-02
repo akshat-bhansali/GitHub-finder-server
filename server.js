@@ -4,10 +4,10 @@ const io = require("socket.io")(3001, {
 
 io.on("connection",(socket)=>{
   console.log("user connected")
-  socket.on("message",(message,roomName,sender,date,avatar)=>{
-    console.log(message,roomName,sender,date,avatar)
+  socket.on("message",(message,roomName,sender,date,avatar_url)=>{
+    console.log(message,roomName,sender,date,avatar_url)
     if(roomName.length){
-      io.to(roomName).emit("message",message,sender,date,avatar)
+      io.to(roomName).emit("message",message,sender,date,avatar_url)
     }else{
       io.emit("message",message)
     }
