@@ -1,5 +1,5 @@
 const io = require("socket.io")(3001, {
-  cors: { origin: "https://git-hub-finder-alpha.vercel.app", methods: ["GET", "POST"] },
+  cors: { origin: "http://localhost:3000", methods: ["GET", "POST"] },
 });
 
 io.on("connection",(socket)=>{
