@@ -1,5 +1,6 @@
 const io = require("socket.io")(3001, {
-  cors: { origin: "http://localhost:3000", methods: ["GET", "POST"] },
+  // cors: { origin: "http://localhost:3000", methods: ["GET", "POST"] },
+  cors: { origin: "https://vercel.com/akshat-bhansalis-projects/git-hub-finder", methods: ["GET", "POST"] },
 });
 
 io.on("connection",(socket)=>{
@@ -22,3 +23,5 @@ io.on("connection",(socket)=>{
     console.log("user gone")
   })
 })
+
+
